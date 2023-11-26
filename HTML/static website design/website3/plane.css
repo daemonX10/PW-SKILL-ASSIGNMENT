@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f3f3f3;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+}
+
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(./assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+}
+
+.navbar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 5rem;
+    background-color: rgba(0, 0, 0, 0.767);
+}
+
+.navbar .logo{
+    align-items: start;
+    padding-right: 2rem;
+    border-right: 2px solid #fffdfd;
+}
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.menu ul {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu ul a{
+    color: #fffdfd;
+}
+
+
+button{
+    width: max-content;
+    height : 25px;
+    border-radius: 5px;
+    color: #fffdfd;
+    padding-left: 4px;
+    padding-right: 4px;
+    background-color: #C32ABA;
+    border:2px solid rgb(240, 240, 240);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover{
+    background-color: #fffdfd;
+    color: #C32ABA;
+    border:2px solid #C32ABA;
+}
+
+.container .text{
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: #fffdfd;
+}
+
+.container .text h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    align-items: center;
+    width: 50vw;
+    text-align: center;
+}
+
+.container .text p{
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+    align-items: center;
+    width: 50vw;
+    text-align: center;
+    padding-bottom: 6vh;
+}
