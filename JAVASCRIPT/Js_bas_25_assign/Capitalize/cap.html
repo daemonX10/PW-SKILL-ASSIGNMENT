@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Name Capitalization Form</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .container {
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    h1 {
+        color: #333;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    label {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    input {
+        padding: 12px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        width: 100%;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        outline: none;
+    }
+
+    button {
+        padding: 12px 20px;
+        margin: 5px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        outline: none;
+    }
+
+    button[type="submit"] {
+        background-color: #4CAF50;
+        color: #fff;
+    }
+
+    button[type="button"] {
+        background-color: #ddd;
+        color: #333;
+    }
+
+    button:hover {
+        background-color: #45a049;
+    }
+
+    .error-message {
+        color: #FF6347;
+        margin-top: 5px;
+        font-size: 14px;
+    }
+
+    .success-message {
+        color: #4CAF50;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    input:focus,
+    button:focus {
+        border: 2px solid #4CAF50;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Name Capitalization Form </h1>
+        <form id="nameForm" onsubmit="return capitalizeFirstLetter()" >
+            <label for="name">
+                Enter Your Name : 
+            </label>
+            <input type="text" id="name" placeholder="e.g. , Damodar Yadav" name="name" required tabindex="1">
+            <p id="error-message" class="error-message"></p>
+            <div id="Sub-clear">
+                <button type="submit" tabindex="2" >Submit</button>
+                <button type="button" onclick="clearForm()" tabindex="3">Clear</button>
+            </div>
+            <p class="success-message" id="success-message"></p>
+        </form>
+    </div>
+
+    <script>
+    // this is on of the solution    document.getElementById('nameForm').addEventListener('submit', function (event) {
+    //            event.preventDefault();
+    //        });
+        function capitalizeFirstLetter(){
+            var inputElement = document.getElementById('name');
+            var errorMessageElement = document.getElementById('error-message');
+            var successMessageElement = document.getElementById('success-message');
+            var inputValue = inputElement.value.trim();
+
+            if(inputValue === ''){
+                errorMessageElement.innerText = "Please enter your name";
+                successMessageElement.innerText = "";
+                return false;
+            }
+
+            // check if the first letter is capital or not 
+            var modifiedValue = inputValue.charAt(0).toUpperCase() + inputValue.slice(1);
+            inputElement.value =modifiedValue;
+            successMessageElement.innerText = "Your name is successfully Capitalized";
+            errorMessageElement.innerText = "";
+            return false;
+            
+
+        }
+
+        function clearForm(){
+            var inputElement = document.getElementById('name');
+            var errorMessageElement = document.getElementById('error-message');
+            var successMessageElement = document.getElementById('success-message');
+
+            inputElement.value = "";
+            errorMessageElement.innerText = "";
+            successMessageElement.innerText = "";
+        }
+    </script>
+</body>
+</html>

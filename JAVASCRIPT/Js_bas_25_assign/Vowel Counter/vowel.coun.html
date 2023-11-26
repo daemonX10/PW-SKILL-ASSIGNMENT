@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vowel Counter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+    
+        .container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    
+        h1 {
+            color: #333;
+        }
+    
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    
+        input {
+            padding: 8px;
+            margin: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    
+        p {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Vowel Counter</h1>
+        <label for="nameInput">Enter Your String</label>
+        <input type="text" id="nameInput" placeholder="Type your string">
+        <button id="countButton">Count Vowels</button>
+        <p id="result"></p>
+    </div>
+    <script>
+        document.getElementById('countButton').addEventListener('click', function () {
+            let text = document.getElementById('nameInput').value.toLowerCase();
+            let result = document.getElementById('result');
+
+            if(!text){
+                result.innerHTML = 'Please enter a string';
+            }
+
+            const vowelCount = (text.match(/[aeiou]/g) || []).length;
+            result.innerHTML = `Hello , your String has ${vowelCount} vowels.`;
+        })
+    </script>
+</body>
+</html>

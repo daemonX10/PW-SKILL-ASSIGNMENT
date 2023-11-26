@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highest Marks Calculator</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        #calculator-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #marksInput {
+            padding: 15px;
+            margin: 15px;
+            width: 60%;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: box-shadow 0.3s;
+        }
+
+        #marksInput:focus {
+            outline: none;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        #calculateBtn {
+            padding: 15px;
+            margin-top: 10px;
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        #calculateBtn:hover {
+            background-color: #45a049;
+        }
+
+        #result-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        #result {
+            font-size: 24px;
+            margin-top: 10px;
+            color: #333;
+        }
+
+        #result-msg {
+            margin-top: 10px;
+            font-size: 16px;
+            color: #555;
+        }
+
+        canvas {
+            margin-top: 40px;
+            max-width: 80%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Highest Marks Calculator</h1>
+
+    <div id="calculator-container">
+        <label for="marksInput">Enter Marks (comma-separated): </label>
+        <input type="text" id="marksInput" placeholder="e.g., 85, 92, 78, 95, 88">
+
+        <button id="calculateBtn" onclick="updateChart()">Calculate Highest Marks</button>
+
+        <div id="result-container">
+            <p id="result"></p>
+            <p id="result-msg"></p>
+        </div>
+
+        <canvas id="marksChart"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        let myChart; // Store the chart object globally
+
+        function updateChart() {
+            const marksInput = document.getElementById('marksInput').value;
+            const marksArray = marksInput.split(',').map(mark => parseInt(mark.trim(), 10));
+
+            if (marksArray.some(isNaN)) {
+                document.getElementById('result').textContent = '';
+                document.getElementById('result-msg').textContent = 'Invalid input. Please enter valid numbers.';
+            } else if (marksArray.length === 0) {
+                document.getElementById('result').textContent = '';
+                document.getElementById('result-msg').textContent = 'Please enter at least one mark.';
+            } else {
+                const highestMarks = Math.max(...marksArray);
+                document.getElementById('result').textContent = `The highest marks scored: ${highestMarks}`;
+                document.getElementById('result-msg').textContent = `Total number of marks entered: ${marksArray.length}`;
+
+                if (myChart) {
+                    // If chart exists, update the data
+                    myChart.data.labels = marksArray.map((_, index) => `Student ${index + 1}`);
+                    myChart.data.datasets[0].data = marksArray;
+
+                    // Set the y-axis scale based on the highest mark
+                    myChart.options.scales.y.max = highestMarks + 10;
+
+                    myChart.update();
+                } else {
+                    // If chart doesn't exist, create it
+                    const ctx = document.getElementById('marksChart').getContext('2d');
+                    myChart = new Chart(ctx, {
+                        type: 'bar',
+                        data: {
+                            labels: marksArray.map((_, index) => `Student ${index + 1}`),
+                            datasets: [{
+                                label: 'Marks',
+                                data: marksArray,
+                                backgroundColor: '#4CAF50',
+                                borderColor: '#45a049',
+                                borderWidth: 1,
+                            }],
+                        },
+                        options: {
+                            scales: {
+                                y: {
+                                    beginAtZero: true,
+                                    max: highestMarks + 10, // Adjust the scale to show some space above the highest mark
+                                },
+                            },
+                        },
+                    });
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

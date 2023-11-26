@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #f2f2f2;
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+
+        label {
+            font-size: 18px;
+            margin-right: 10px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #result {
+            font-size: 20px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Color Mixer</h1>
+    <label for="colorOne">Color 1:</label>
+    <input type="text" id="colorOne" placeholder="Enter color 1">
+    <label for="colorTwo">Color 2:</label>
+    <input type="text" id="colorTwo" placeholder="Enter color 2">
+    <button id="mix" onclick="mixColors()" i>Mix</button>
+    <p id="answer"></p>
+</body>
+<script>
+    
+    const result = document.getElementById('answer');
+
+        function mixColors() {
+            const color1 = document.getElementById('colorOne').value;
+            const color2 = document.getElementById('colorTwo').value;
+
+            switch (true) {
+                case (color1 == "red" && color2 == "blue") || (color1 == "blue" && color2 == "red"):
+                    result.textContent = "purple";
+                    break;
+
+                case (color1 == "red" && color2 == "yellow") || (color1 == "yellow" && color2 == "red"):
+                    result.textContent = "orange";
+                    break;
+                case (color1 == "blue" && color2 == "yellow") || (color1 ==="yellow" && color2 == "blue"):
+                    result.textContent = "green"
+                    break;
+                default:
+                    result.textContent="Invalid color combination";
+                    break;
+            }
+        }
+</script>
+</html>
