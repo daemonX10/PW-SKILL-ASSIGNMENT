@@ -1,0 +1,170 @@
+*{
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;1,300&family=Rubik+Pixels&display=swap');
+body{
+font-family: 'Poppins', sans-serif ,'Rubik Pixels', cursive;
+}
+    
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+
+}
+ body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #edf1fd;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+ }
+
+li{
+    list-style: none;
+    cursor: pointer;
+ }
+
+a{
+    text-decoration: none;
+}
+
+button{
+    background-color: rgb(18,155,155);
+    padding:4px 10px;
+    cursor: pointer;
+    color: white;
+    border: 1px solid white;
+    border-radius: 5px;
+    font-weight: 700;
+    width: fit-content;
+}
+
+button:hover {
+    background-color: white;
+    color: rgb(18,155,155);
+    border:1px solid black;
+}
+
+header{
+    padding: 15px 0 ;
+}
+
+nav{
+   display: flex; 
+   width: 100%;
+   align-items: center;
+   justify-content: space-around;
+
+}
+
+nav .logo{
+    font-weight: 700;
+    font-size: 25px;
+
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    font-weight: 500;
+
+}
+
+nav ul li:hover{
+    text-decoration: underline;
+    font-weight: 800;
+    color: #EDF1FD;
+}
+
+.search_field{
+    display: flex;
+    gap: 30px;
+
+}
+
+input{
+    padding: 4px 10px;
+}
+
+.hero_section {
+    display: flex;
+    align-items: center;
+
+}
+
+.hero_left_section{
+    width: 60%;
+    padding: 0 8%;
+
+}
+
+.hero_left_section h1{
+    
+    font-weight: 800;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.hero_left_section h1 span{
+    color: rgb(18,155,155);
+    font-weight: 900;
+    background-color: #dfdfe0;
+    padding: 0 10px;
+
+}
+
+.hero_left_section p{
+    font-weight: 500;
+    font-size: 24px;
+
+}
+
+.hero_left_section p span{
+    font-weight: 700;
+    font-size: 25px;
+    color: rgb(18,155,155);
+}
+
+.hero_right_section {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;   
+}
+
+.hero_right_section_btn{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.hero_right_section img{
+     border: 400px;
+     width: 250px;
+     border-radius: 40%;
+}
+
+footer{
+    font-weight: 600;
+    display: flex;
+    padding: 20px 0;
+    justify-content: space-around;
+}
+
+footer ul{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+footer ul li i:hover{
+    display: flex;
+    background-color: #EDF1FD;
+    color: rgb(18,155,155);
+    
+}

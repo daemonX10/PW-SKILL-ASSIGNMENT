@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom, rgba(161, 148, 148, 0.6),rgba(226, 0, 0, 0.116),rgba(18, 24, 4, 0.6)), url(pexels-maxyne-barcel-10402282\ 1\ \(2\).png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    
+}
+
+.container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.navigation{
+    width: 99vw;
+    height: 20vh;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 20px;
+    
+}
+
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.option ul {
+    list-style: none;
+    width: 45vw;
+    display: flex;
+    justify-content: space-evenly;
+}
+a{
+    color:#FFC233;
+    text-decoration: none;
+}
+
+.order{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+button{
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    background-color: #ec1f1f;
+    border: none;
+    }
+
+.hero button{
+    margin: 20px;
+}
+.hero{
+    width: 100vw;
+    padding-top: 50px;
+    color: #FFC233;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+h1{
+    width: 60vw;
+    overflow: hidden;
+    font-size: 6vw;
+    
+}
+.image_scroll{
+    width: 3vw;
+    height: 2vh;
+}
