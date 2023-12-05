@@ -82,12 +82,63 @@ main{
   width: 60%;
   display: flex;
   flex-direction: column;
+  margin: 5vh 0 0 30px;
 }
 
-.onEarImg{
-  width: 10%;
-  height: 20vh;
+.OnEarImg{
+  width: 38%;
+  height: 12vh;
   position: relative;
-  top: -220px;
-  right: 80px;
+  left: 5vw;
+}
+
+.main h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.main h4{
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0.2rem 0 0.5rem 0;
+}
+
+.main p{
+  line-height: 25px;
+  font-family: "Poppins", sans-serif;
+  font-size: 12px;
+  font-weight: 300;
+  margin: 0.2rem 0 1rem 0;
+  width: 45%;
+}
+
+.shopping-bag-section{
+  width: 30%;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-evenly;
+  background-color:#1E1E21;
+  border-radius: 10px;
+}
+
+.shopping-bag-section img{
+  width: 15px;
+  background-color: transparent;
+}
+
+.shopping-bag-section p{
+  color: white;
+  background-color: transparent;
+  width: 33%;
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.shopping-bag-section span{
+  background-color: transparent;
 }
