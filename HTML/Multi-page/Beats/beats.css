@@ -34,13 +34,14 @@ nav img {
 }
 
 .nav-right-section {
-  width: 35vw;
+  width: 40vw;
   display: flex;
   align-items: center;
   justify-content: start;
   justify-content: space-between;
   font-size: 1rem;
   font-weight: 700;
+  flex-wrap: wrap;
 }
 
 nav ul{
@@ -57,4 +58,36 @@ nav button{
   font-size: 1rem;
   padding: 10px 30px;
   /* margin-left: 5vw; */
+}
+
+main{
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: center;
+  position: relative;
+}
+
+.mainImg{
+  width: 18%;
+  height: 45vw;
+  position: relative;
+  top: -220px;
+  right: 80px;
+
+}
+
+.main{
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+}
+
+.onEarImg{
+  width: 10%;
+  height: 20vh;
+  position: relative;
+  top: -220px;
+  right: 80px;
 }
