@@ -226,18 +226,57 @@ main{
   margin-top: 50px ;
 }
 
-/* .case-logo{
+.case-logo{
   width: 20%;
   height: 7vh;
   margin-bottom: 50px;
-} */
+}
 
 .case-item{
   width: 70%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
   justify-content: center;
+  justify-content: space-evenly;
+}
+
+.case-item-img{
+  width: 45%;
+  height: 40%;
+  background-color: transparent;
+}
+
+.case-item div{
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.case-item div p:first-child{
+  width: 50%;
+  height: 30%;
+  font-size: 12px;
+  font-weight: 400;
+  margin: 0 0 20px 0;
+  line-height: 25px;
+}
+
+.case-item div p:last-child{
+  color: #bdc0c2;
+  width: 60%;
+  height: 7vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  border-radius: 10px;
+  background-color: #1E1E21;
+}
+
+.case-item div p:last-child img{
+  background-color: transparent;
 }
 
