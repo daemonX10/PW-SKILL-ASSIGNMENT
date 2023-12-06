@@ -70,13 +70,22 @@ main{
   position: relative;
 }
 
+@keyframes slide-up {
+    0% {
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
 .mainImg{
   width: 18%;
   height: 90vh;
   position: relative;
   top: -220px;
   right: 80px;
-
+  animation: slide-up 0.7s ease-out forwards;
 }
 
 .main{
@@ -228,7 +237,7 @@ main{
 
 .case-logo{
   width: 20%;
-  height: 7vh;
+  height: 8vh;
   margin-bottom: 50px;
 }
 
