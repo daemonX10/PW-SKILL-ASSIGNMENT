@@ -250,6 +250,14 @@ main{
   justify-content: space-evenly;
 }
 
+.case-image{
+  width: 30%;
+  height: 40%;
+  background-color: transparent;
+
+}
+
+
 .case-item-img{
   width: 45%;
   height: 40%;
@@ -438,7 +446,7 @@ main{
 }
 
 .shopping-icon{
-  width: 20px;
+  width: 25px;
   height: 15px;
-  background-color: transparent;
+  /* border-radius: 10px; */
 }
