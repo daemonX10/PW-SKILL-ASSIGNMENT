@@ -486,8 +486,33 @@ ul li:first-child a{
   gap: 30px;
 }
 
+.footer-subscription div:first-child{
+  background-color: black;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
 
-.footer-subscription div{
+.subscribe-button{
+  background-color: #0f0f10;
+  border-radius: 8px;
+  padding: 10px 20px;
+  border:none;
   display: flex;
-  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.subscribe{
+  display: flex;
+}
+
+.subscribe input{
+  border: none;
+  background-color: transparent;
+  color: #bdc0c2;
+
+}
+
+.subscribe-button img{
+  scale: 0.8;
 }
