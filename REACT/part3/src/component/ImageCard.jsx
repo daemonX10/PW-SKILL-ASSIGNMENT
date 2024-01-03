@@ -14,3 +14,5 @@ export const ImageCard=({imageUrl,id})=>{
     </div>
     )
 }
+
+// TODO: 3. Create a component called ImageCard.jsx which will be used to display the image in the home page.
